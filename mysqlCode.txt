@@ -1,0 +1,15 @@
+CREATE DATABASE recipe_app;
+
+USE recipe_app;
+
+CREATE TABLE IF NOT EXISTS recipes (
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    ingredients TEXT NOT NULL,
+    instructions TEXT NOT NULL,
+    prep_time INT NOT NULL,
+    cook_time INT NOT NULL,
+    difficulty ENUM('easy', 'medium', 'hard') NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    servings INT NOT NULL
+);
